@@ -44,17 +44,17 @@ $ git --version
 This will print the version of Git installed on your machine.
 
 ### How to generate SSH key for GitHub authorization
-1.Open a terminal
+1. Open a terminal
 2. Go to your home directory by typing cd ~/
 3. Type the following command
-$ ssh-keygen -t rsa
+   $ ssh-keygen -t rsa
 4. This will prompt you to enter a filename to store the key
 5. Just press enter to accept the default filename (/Users/you/.ssh/id_rsa)
 6. Then it will ask you to create a passphrase. This is optional, either create a passphrase or press enter for no passphrase
-When you press enter, two files will be created
+   When you press enter, two files will be created
 ~/.ssh/id_rsa
 ~/.ssh/id_rsa.pub
-7. Your public key is stored in the file ending with .pub, i.e. ~/.ssh/id_rsa.pub
+7.  Your public key is stored in the file ending with .pub, i.e. ~/.ssh/id_rsa.pub
 ### How to access and copy public SSH key
 In order to authenticate yourself and your device with GitHub, you need to upload your public SSH key which you generated above to your GitHub account.
 
