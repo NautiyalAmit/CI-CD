@@ -1,6 +1,6 @@
-# CI-CD
+# CI/CD
 
-## configuring Jenkins autobuild process with Git repo.
+## Configuring Jenkins autobuild process with Git repo.
 
 1. Download jenkins pluging for your machine from https://jenkins.io/.
 2. Once downloaded,  install Jenkins in your machine .
