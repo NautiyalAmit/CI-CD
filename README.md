@@ -2,7 +2,7 @@
 
 ## Configuring Jenkins autobuild process with Git repo.
 
-### setting up  jenkins
+### 1.setting up  jenkins
 1. Download jenkins pluging for your machine from https://jenkins.io/.
 2. Once downloaded,  install Jenkins in your machine .
 3. It will ask to  Unlock Jenkins when localhost opens in your browser(http://localhost:8080). So ,  To ensure Jenkins is    securely set up by the administrator, a password has been written to the log (not sure where to find it?) and this file on the server:
@@ -26,9 +26,9 @@ Jenkins URL:	http://localhost:8080/
 
 8. Now, jenkins is new for new jobs!
 
-### Trigger Jenkins builds by pushing to Github(https://www.fourkitchens.com/blog/article/trigger-jenkins-builds-pushing-github/)
+## 2. Trigger Jenkins builds by pushing to Github(https://www.fourkitchens.com/blog/article/trigger-jenkins-builds-pushing-github/)
 
-Step 1: Grant your server access to your private Github repository.
+### Step 1: Grant your server access to your private Github repository.
 
 You may have Jenkins running on the same machine as your webhost, or they may be on separate machines with Jenkins configured to treat the webhost as a remote node. Either way, you’re going to want to SSH into the webhost and ensure that whichever Linux user Jenkins is building jobs as, can authenticate to Github. We have a robot user called ‘Bender’ exactly for this purpose, so I’ll use that in the examples.
 
@@ -84,4 +84,17 @@ https://github.com/settings/profile
 5. Enter your passphrase and press enter.
 6. It will then start to clone the project to your directory.
 ##### cheers! You are all now set up to use Git and GitHub.
+
+Now, ssh git@github.com  and wait to see such response.
+PTY allocation request failed on channel 0
+Hi NautiyalAmit! You've successfully authenticated, but GitHub does not provide shell access.
+Connection to github.com closed.
+
+### Step 2: Install the Git and Github plugins.
+Under ‘Manage Jenkins’ -> ‘Manage Plugins’, select and install both Github and Git plugins. Restart to finish the installation.
+
+Configure both of these at ‘Manage Jenkins’ -> ‘Configure System’. Make sure the path to git is correctly set, and choose ‘Manually manage hook URLs” under the ‘Github Web Hook’ section.
+
+
+
 
